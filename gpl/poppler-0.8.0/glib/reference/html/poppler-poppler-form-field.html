@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PopplerFormField</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="Poppler Reference Manual">
+<link rel="up" href="ch01.html" title="Poppler">
+<link rel="prev" href="poppler-poppler-attachment.html" title="PopplerAttachment">
+<link rel="next" href="poppler-poppler-enums.html" title="poppler-enums">
+<meta name="generator" content="GTK-Doc V1.9 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="Poppler">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="poppler-poppler-attachment.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Poppler Reference Manual</th>
+<td><a accesskey="n" href="poppler-poppler-enums.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id354585" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id393580" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id393556" class="shortcut">Object Hierarchy</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="poppler-poppler-form-field"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id354585"></a><span class="refentrytitle">PopplerFormField</span>
+</h2>
+<p>PopplerFormField</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<a name="PopplerFormField"></a><pre class="synopsis">
+
+
+
+                    <a class="link" href="poppler-poppler-form-field.html#PopplerFormField-struct">PopplerFormField</a>;
+enum                <a class="link" href="poppler-poppler-form-field.html#PopplerFormButtonType">PopplerFormButtonType</a>;
+enum                <a class="link" href="poppler-poppler-form-field.html#PopplerFormChoiceType">PopplerFormChoiceType</a>;
+enum                <a class="link" href="poppler-poppler-form-field.html#PopplerFormFieldType">PopplerFormFieldType</a>;
+enum                <a class="link" href="poppler-poppler-form-field.html#PopplerFormTextType">PopplerFormTextType</a>;
+gint                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-get-id">poppler_form_field_get_id</a>           (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+<a class="link" href="poppler-poppler-form-field.html#PopplerFormFieldType">PopplerFormFieldType</a> <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-get-field-type">poppler_form_field_get_field_type</a>  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-is-read-only">poppler_form_field_is_read_only</a>     (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gdouble             <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-get-font-size">poppler_form_field_get_font_size</a>    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+<a class="link" href="poppler-poppler-form-field.html#PopplerFormButtonType">PopplerFormButtonType</a> <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-button-get-button-type">poppler_form_field_button_get_button_type</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-button-get-state">poppler_form_field_button_get_state</a> (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-button-set-state">poppler_form_field_button_set_state</a> (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gboolean state);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-can-select-multiple">poppler_form_field_choice_can_select_multiple</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-commit-on-change">poppler_form_field_choice_commit_on_change</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-do-spell-check">poppler_form_field_choice_do_spell_check</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+<a class="link" href="poppler-poppler-form-field.html#PopplerFormChoiceType">PopplerFormChoiceType</a> <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-get-choice-type">poppler_form_field_choice_get_choice_type</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gchar*              <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-get-item">poppler_form_field_choice_get_item</a>  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);
+gint                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-get-n-items">poppler_form_field_choice_get_n_items</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gchar*              <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-get-text">poppler_form_field_choice_get_text</a>  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-is-editable">poppler_form_field_choice_is_editable</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-is-item-selected">poppler_form_field_choice_is_item_selected</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-select-item">poppler_form_field_choice_select_item</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-set-text">poppler_form_field_choice_set_text</a>  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         const gchar *text);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-toggle-item">poppler_form_field_choice_toggle_item</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-choice-unselect-all">poppler_form_field_choice_unselect_all</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-do-scroll">poppler_form_field_text_do_scroll</a>   (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-do-spell-check">poppler_form_field_text_do_spell_check</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gint                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-get-max-len">poppler_form_field_text_get_max_len</a> (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gchar*              <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-get-text">poppler_form_field_text_get_text</a>    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+<a class="link" href="poppler-poppler-form-field.html#PopplerFormTextType">PopplerFormTextType</a> <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-get-text-type">poppler_form_field_text_get_text_type</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-is-password">poppler_form_field_text_is_password</a> (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+gboolean            <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-is-rich-text">poppler_form_field_text_is_rich_text</a>
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);
+void                <a class="link" href="poppler-poppler-form-field.html#poppler-form-field-text-set-text">poppler_form_field_text_set_text</a>    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         const gchar *text);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id393556"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----PopplerFormField
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id393580"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id393596"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id393607"></a><h3>
+<a name="PopplerFormField-struct"></a>PopplerFormField</h3>
+<a class="indexterm" name="id393619"></a><pre class="programlisting">typedef struct _PopplerFormField PopplerFormField;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393634"></a><h3>
+<a name="PopplerFormButtonType"></a>enum PopplerFormButtonType</h3>
+<a class="indexterm" name="id393646"></a><pre class="programlisting">typedef enum
+{
+  POPPLER_FORM_BUTTON_PUSH,
+  POPPLER_FORM_BUTTON_CHECK,
+  POPPLER_FORM_BUTTON_RADIO
+} PopplerFormButtonType;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393662"></a><h3>
+<a name="PopplerFormChoiceType"></a>enum PopplerFormChoiceType</h3>
+<a class="indexterm" name="id393675"></a><pre class="programlisting">typedef enum
+{
+  POPPLER_FORM_CHOICE_COMBO,
+  POPPLER_FORM_CHOICE_LIST
+} PopplerFormChoiceType;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393691"></a><h3>
+<a name="PopplerFormFieldType"></a>enum PopplerFormFieldType</h3>
+<a class="indexterm" name="id393703"></a><pre class="programlisting">typedef enum
+{
+  POPPLER_FORM_FIELD_UNKNOWN,
+  POPPLER_FORM_FIELD_BUTTON,
+  POPPLER_FORM_FIELD_TEXT,
+  POPPLER_FORM_FIELD_CHOICE,
+  POPPLER_FORM_FIELD_SIGNATURE
+} PopplerFormFieldType;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393720"></a><h3>
+<a name="PopplerFormTextType"></a>enum PopplerFormTextType</h3>
+<a class="indexterm" name="id393732"></a><pre class="programlisting">typedef enum
+{
+  POPPLER_FORM_TEXT_NORMAL,
+  POPPLER_FORM_TEXT_MULTILINE,
+  POPPLER_FORM_TEXT_FILE_SELECT
+} PopplerFormTextType;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393748"></a><h3>
+<a name="poppler-form-field-get-id"></a>poppler_form_field_get_id ()</h3>
+<a class="indexterm" name="id393761"></a><pre class="programlisting">gint                poppler_form_field_get_id           (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the id of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> the id of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393838"></a><h3>
+<a name="poppler-form-field-get-field-type"></a>poppler_form_field_get_field_type ()</h3>
+<a class="indexterm" name="id393850"></a><pre class="programlisting"><a class="link" href="poppler-poppler-form-field.html#PopplerFormFieldType">PopplerFormFieldType</a> poppler_form_field_get_field_type  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the type of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <a class="link" href="poppler-poppler-form-field.html#PopplerFormFieldType"><span class="type">PopplerFormFieldType</span></a> of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id393935"></a><h3>
+<a name="poppler-form-field-is-read-only"></a>poppler_form_field_is_read_only ()</h3>
+<a class="indexterm" name="id393947"></a><pre class="programlisting">gboolean            poppler_form_field_is_read_only     (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether <em class="parameter"><code>field</code></em> is read only</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if <em class="parameter"><code>field</code></em> is read only
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394035"></a><h3>
+<a name="poppler-form-field-get-font-size"></a>poppler_form_field_get_font_size ()</h3>
+<a class="indexterm" name="id394047"></a><pre class="programlisting">gdouble             poppler_form_field_get_font_size    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the font size of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> the font size of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394124"></a><h3>
+<a name="poppler-form-field-button-get-button-type"></a>poppler_form_field_button_get_button_type ()</h3>
+<a class="indexterm" name="id394136"></a><pre class="programlisting"><a class="link" href="poppler-poppler-form-field.html#PopplerFormButtonType">PopplerFormButtonType</a> poppler_form_field_button_get_button_type
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the button type of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <a class="link" href="poppler-poppler-form-field.html#PopplerFormButtonType"><span class="type">PopplerFormButtonType</span></a> of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394220"></a><h3>
+<a name="poppler-form-field-button-get-state"></a>poppler_form_field_button_get_state ()</h3>
+<a class="indexterm" name="id394233"></a><pre class="programlisting">gboolean            poppler_form_field_button_get_state (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Queries a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a> and returns its current state. Returns <code class="literal">TRUE</code> if
+<em class="parameter"><code>field</code></em> is pressed in and <code class="literal">FALSE</code> if it is raised.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> current state of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394337"></a><h3>
+<a name="poppler-form-field-button-set-state"></a>poppler_form_field_button_set_state ()</h3>
+<a class="indexterm" name="id394349"></a><pre class="programlisting">void                poppler_form_field_button_set_state (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gboolean state);</pre>
+<p>
+Sets the status of <em class="parameter"><code>field</code></em>. Set to <code class="literal">TRUE</code> if you want the <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+to be 'pressed in', and <code class="literal">FALSE</code> to raise it.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state</code></em>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> or <code class="literal">FALSE</code>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394476"></a><h3>
+<a name="poppler-form-field-choice-can-select-multiple"></a>poppler_form_field_choice_can_select_multiple ()</h3>
+<a class="indexterm" name="id394487"></a><pre class="programlisting">gboolean            poppler_form_field_choice_can_select_multiple
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether <em class="parameter"><code>field</code></em> allows multiple choices to be selected</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if <em class="parameter"><code>field</code></em> allows multiple choices to be selected
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394575"></a><h3>
+<a name="poppler-form-field-choice-commit-on-change"></a>poppler_form_field_choice_commit_on_change ()</h3>
+<a class="indexterm" name="id394587"></a><pre class="programlisting">gboolean            poppler_form_field_choice_commit_on_change
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394643"></a><h3>
+<a name="poppler-form-field-choice-do-spell-check"></a>poppler_form_field_choice_do_spell_check ()</h3>
+<a class="indexterm" name="id394654"></a><pre class="programlisting">gboolean            poppler_form_field_choice_do_spell_check
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether spell checking should be done for the contents of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if spell checking should be done for <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394742"></a><h3>
+<a name="poppler-form-field-choice-get-choice-type"></a>poppler_form_field_choice_get_choice_type ()</h3>
+<a class="indexterm" name="id394753"></a><pre class="programlisting"><a class="link" href="poppler-poppler-form-field.html#PopplerFormChoiceType">PopplerFormChoiceType</a> poppler_form_field_choice_get_choice_type
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the choice type of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <a class="link" href="poppler-poppler-form-field.html#PopplerFormChoiceType"><span class="type">PopplerFormChoiceType</span></a> of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394838"></a><h3>
+<a name="poppler-form-field-choice-get-item"></a>poppler_form_field_choice_get_item ()</h3>
+<a class="indexterm" name="id394850"></a><pre class="programlisting">gchar*              poppler_form_field_choice_get_item  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);</pre>
+<p>
+Returns the contents of the item on <em class="parameter"><code>field</code></em> at the given index</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em>&#160;:</span></p></td>
+<td> the index of the item
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> a new allocated string. It must be freed with <code class="function">g_free()</code> when done.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id394952"></a><h3>
+<a name="poppler-form-field-choice-get-n-items"></a>poppler_form_field_choice_get_n_items ()</h3>
+<a class="indexterm" name="id394965"></a><pre class="programlisting">gint                poppler_form_field_choice_get_n_items
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Returns the number of items on <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> the number of items on <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id395043"></a><h3>
+<a name="poppler-form-field-choice-get-text"></a>poppler_form_field_choice_get_text ()</h3>
+<a class="indexterm" name="id395055"></a><pre class="programlisting">gchar*              poppler_form_field_choice_get_text  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Retrieves the contents of <em class="parameter"><code>field</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> a new allocated string. It must be freed with <code class="function">g_free()</code> when done.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id395137"></a><h3>
+<a name="poppler-form-field-choice-is-editable"></a>poppler_form_field_choice_is_editable ()</h3>
+<a class="indexterm" name="id395149"></a><pre class="programlisting">gboolean            poppler_form_field_choice_is_editable
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether <em class="parameter"><code>field</code></em> is editable</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if <em class="parameter"><code>field</code></em> is editable
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id395238"></a><h3>
+<a name="poppler-form-field-choice-is-item-selected"></a>poppler_form_field_choice_is_item_selected ()</h3>
+<a class="indexterm" name="id395249"></a><pre class="programlisting">gboolean            poppler_form_field_choice_is_item_selected
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);</pre>
+<p>
+Checks whether the item at the given index on <em class="parameter"><code>field</code></em> is currently selected</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em>&#160;:</span></p></td>
+<td> the index of the item
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if item at <em class="parameter"><code>index</code></em> is currently selected
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id395358"></a><h3>
+<a name="poppler-form-field-choice-select-item"></a>poppler_form_field_choice_select_item ()</h3>
+<a class="indexterm" name="id396818"></a><pre class="programlisting">void                poppler_form_field_choice_select_item
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);</pre>
+<p>
+Selects the item at the given index on <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em>&#160;:</span></p></td>
+<td> the index of the item
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id396890"></a><h3>
+<a name="poppler-form-field-choice-set-text"></a>poppler_form_field_choice_set_text ()</h3>
+<a class="indexterm" name="id396900"></a><pre class="programlisting">void                poppler_form_field_choice_set_text  (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         const gchar *text);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id396958"></a><h3>
+<a name="poppler-form-field-choice-toggle-item"></a>poppler_form_field_choice_toggle_item ()</h3>
+<a class="indexterm" name="id396969"></a><pre class="programlisting">void                poppler_form_field_choice_toggle_item
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         gint index);</pre>
+<p>
+Sets the text in <em class="parameter"><code>field</code></em> to the given value, replacing the current contents</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>index</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397043"></a><h3>
+<a name="poppler-form-field-choice-unselect-all"></a>poppler_form_field_choice_unselect_all ()</h3>
+<a class="indexterm" name="id397053"></a><pre class="programlisting">void                poppler_form_field_choice_unselect_all
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Unselects all the items on <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397108"></a><h3>
+<a name="poppler-form-field-text-do-scroll"></a>poppler_form_field_text_do_scroll ()</h3>
+<a class="indexterm" name="id397118"></a><pre class="programlisting">gboolean            poppler_form_field_text_do_scroll   (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397167"></a><h3>
+<a name="poppler-form-field-text-do-spell-check"></a>poppler_form_field_text_do_spell_check ()</h3>
+<a class="indexterm" name="id397178"></a><pre class="programlisting">gboolean            poppler_form_field_text_do_spell_check
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether spell checking should be done for the contents of <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if spell checking should be done for <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397256"></a><h3>
+<a name="poppler-form-field-text-get-max-len"></a>poppler_form_field_text_get_max_len ()</h3>
+<a class="indexterm" name="id397266"></a><pre class="programlisting">gint                poppler_form_field_text_get_max_len (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Retrieves the maximum allowed length of the text in <em class="parameter"><code>field</code></em></p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> the maximum allowed number of characters in <em class="parameter"><code>field</code></em>, or -1 if there is no maximum.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397334"></a><h3>
+<a name="poppler-form-field-text-get-text"></a>poppler_form_field_text_get_text ()</h3>
+<a class="indexterm" name="id397345"></a><pre class="programlisting">gchar*              poppler_form_field_text_get_text    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Retrieves the contents of <em class="parameter"><code>field</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> a new allocated string. It must be freed with <code class="function">g_free()</code> when done.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397417"></a><h3>
+<a name="poppler-form-field-text-get-text-type"></a>poppler_form_field_text_get_text_type ()</h3>
+<a class="indexterm" name="id397428"></a><pre class="programlisting"><a class="link" href="poppler-poppler-form-field.html#PopplerFormTextType">PopplerFormTextType</a> poppler_form_field_text_get_text_type
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Gets the text type of <em class="parameter"><code>field</code></em>.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <a class="link" href="poppler-poppler-form-field.html#PopplerFormTextType"><span class="type">PopplerFormTextType</span></a> of <em class="parameter"><code>field</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397504"></a><h3>
+<a name="poppler-form-field-text-is-password"></a>poppler_form_field_text_is_password ()</h3>
+<a class="indexterm" name="id397514"></a><pre class="programlisting">gboolean            poppler_form_field_text_is_password (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether content of <em class="parameter"><code>field</code></em> is a password and it must be hidden</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if the content of <em class="parameter"><code>field</code></em> is a password
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397592"></a><h3>
+<a name="poppler-form-field-text-is-rich-text"></a>poppler_form_field_text_is_rich_text ()</h3>
+<a class="indexterm" name="id397602"></a><pre class="programlisting">gboolean            poppler_form_field_text_is_rich_text
+                                                        (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field);</pre>
+<p>
+Checks whether the contents of <em class="parameter"><code>field</code></em> are rich text</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td> <code class="literal">TRUE</code> if the contents of <em class="parameter"><code>field</code></em> are rich text
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id397681"></a><h3>
+<a name="poppler-form-field-text-set-text"></a>poppler_form_field_text_set_text ()</h3>
+<a class="indexterm" name="id397691"></a><pre class="programlisting">void                poppler_form_field_text_set_text    (<a class="link" href="poppler-poppler-form-field.html#PopplerFormField">PopplerFormField</a> *field,
+                                                         const gchar *text);</pre>
+<p>
+Sets the text in <em class="parameter"><code>field</code></em> to the given value, replacing the current contents.</p>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>field</code></em>&#160;:</span></p></td>
+<td> a <a class="link" href="poppler-poppler-form-field.html#PopplerFormField"><span class="type">PopplerFormField</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em>&#160;:</span></p></td>
+<td> the new text
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id397765"></a><div class="refsect2" lang="en"><a name="id397766"></a></div>
+<hr>
+<div class="refsect2" lang="en"><a name="id397767"></a></div>
+</div>
+</div>
+</body>
+</html>

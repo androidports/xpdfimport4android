@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="poppler-poppler-private">
+<refmeta>
+<refentrytitle role="top_of_page">poppler-private</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>POPPLER Library</refmiscinfo>
+</refmeta>
+
+<refnamediv>
+<refname>poppler-private</refname>
+<refpurpose></refpurpose>
+<!--[<xref linkend="desc" endterm="desc.title"/>]-->
+</refnamediv>
+
+<refsynopsisdiv role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="PopplerDocument"/><anchor id="PopplerPage"/>
+<synopsis>
+
+
+
+                    <link linkend="PopplerDocument-struct">PopplerDocument</link>;
+                    <link linkend="PopplerPSFile">PopplerPSFile</link>;
+                    <link linkend="PopplerFontInfo">PopplerFontInfo</link>;
+                    <link linkend="PopplerPage-struct">PopplerPage</link>;
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----PopplerDocument
+</synopsis>
+<synopsis>
+
+  <link linkend="GObject">GObject</link>
+   +----PopplerPage
+</synopsis>
+
+</refsect1>
+
+
+
+
+
+<refsect1 role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+
+  &quot;<link linkend="PopplerDocument--author">author</link>&quot;                   <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--creation-date">creation-date</link>&quot;            <link linkend="gint">gint</link>                  : Read
+  &quot;<link linkend="PopplerDocument--creator">creator</link>&quot;                  <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--format">format</link>&quot;                   <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--keywords">keywords</link>&quot;                 <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--linearized">linearized</link>&quot;               <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--metadata">metadata</link>&quot;                 <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--mod-date">mod-date</link>&quot;                 <link linkend="gint">gint</link>                  : Read
+  &quot;<link linkend="PopplerDocument--page-layout">page-layout</link>&quot;              <link linkend="PopplerPageLayout">PopplerPageLayout</link>     : Read
+  &quot;<link linkend="PopplerDocument--page-mode">page-mode</link>&quot;                <link linkend="PopplerPageMode">PopplerPageMode</link>       : Read
+  &quot;<link linkend="PopplerDocument--permissions">permissions</link>&quot;              <link linkend="PopplerPermissions">PopplerPermissions</link>    : Read
+  &quot;<link linkend="PopplerDocument--producer">producer</link>&quot;                 <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--subject">subject</link>&quot;                  <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--title">title</link>&quot;                    <link linkend="gchararray">gchararray</link>            : Read
+  &quot;<link linkend="PopplerDocument--viewer-preferences">viewer-preferences</link>&quot;       <link linkend="PopplerViewerPreferences">PopplerViewerPreferences</link>  : Read
+  &quot;<link linkend="PopplerPage--label">label</link>&quot;                    <link linkend="gchararray">gchararray</link>            : Read
+</synopsis>
+</refsect1>
+
+
+
+<refsect1 role="desc">
+<title role="desc.title">Description</title>
+<para>
+
+</para>
+</refsect1>
+
+<refsect1 role="details">
+<title role="details.title">Details</title>
+<refsect2>
+<title><anchor id="PopplerDocument-struct" role="struct"/>PopplerDocument</title>
+<indexterm><primary>PopplerDocument</primary></indexterm><programlisting>typedef struct _PopplerDocument PopplerDocument;</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="PopplerPSFile" role="struct"/>PopplerPSFile</title>
+<indexterm><primary>PopplerPSFile</primary></indexterm><programlisting>typedef struct {
+  GObject parent_instance;
+
+  PopplerDocument *document;
+  PSOutputDev *out;
+  char *filename;
+  int first_page;
+  int last_page;
+  double paper_width;
+  double paper_height;
+  gboolean duplex;
+} PopplerPSFile;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="PopplerFontInfo" role="struct"/>PopplerFontInfo</title>
+<indexterm><primary>PopplerFontInfo</primary></indexterm><programlisting>typedef struct {
+  GObject parent_instance;
+  PopplerDocument *document;
+  FontInfoScanner *scanner;
+} PopplerFontInfo;
+</programlisting>
+<para>
+
+</para></refsect2>
+<refsect2>
+<title><anchor id="PopplerPage-struct" role="struct"/>PopplerPage</title>
+<indexterm><primary>PopplerPage</primary></indexterm><programlisting>typedef struct _PopplerPage PopplerPage;</programlisting>
+<para>
+
+</para></refsect2>
+
+</refsect1>
+<refsect1 role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2><title><anchor id="PopplerDocument--author"/>The <literal>&quot;author&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:author</primary></indexterm><programlisting>  &quot;author&quot;                   <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The author of the document.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--creation-date"/>The <literal>&quot;creation-date&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:creation-date</primary></indexterm><programlisting>  &quot;creation-date&quot;            <link linkend="gint">gint</link>                  : Read</programlisting>
+<para>The date and time the document was created.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--creator"/>The <literal>&quot;creator&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:creator</primary></indexterm><programlisting>  &quot;creator&quot;                  <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The software that created the document.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--format"/>The <literal>&quot;format&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:format</primary></indexterm><programlisting>  &quot;format&quot;                   <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The PDF version of the document.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--keywords"/>The <literal>&quot;keywords&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:keywords</primary></indexterm><programlisting>  &quot;keywords&quot;                 <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>Keywords.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--linearized"/>The <literal>&quot;linearized&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:linearized</primary></indexterm><programlisting>  &quot;linearized&quot;               <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>Is the document optimized for web viewing?.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--metadata"/>The <literal>&quot;metadata&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:metadata</primary></indexterm><programlisting>  &quot;metadata&quot;                 <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>Embedded XML metadata.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--mod-date"/>The <literal>&quot;mod-date&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:mod-date</primary></indexterm><programlisting>  &quot;mod-date&quot;                 <link linkend="gint">gint</link>                  : Read</programlisting>
+<para>The date and time the document was modified.</para><para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--page-layout"/>The <literal>&quot;page-layout&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:page-layout</primary></indexterm><programlisting>  &quot;page-layout&quot;              <link linkend="PopplerPageLayout">PopplerPageLayout</link>     : Read</programlisting>
+<para>Initial Page Layout.</para><para>Default value: POPPLER_PAGE_LAYOUT_UNSET</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--page-mode"/>The <literal>&quot;page-mode&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:page-mode</primary></indexterm><programlisting>  &quot;page-mode&quot;                <link linkend="PopplerPageMode">PopplerPageMode</link>       : Read</programlisting>
+<para>Page Mode.</para><para>Default value: POPPLER_PAGE_MODE_UNSET</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--permissions"/>The <literal>&quot;permissions&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:permissions</primary></indexterm><programlisting>  &quot;permissions&quot;              <link linkend="PopplerPermissions">PopplerPermissions</link>    : Read</programlisting>
+<para>Permissions.</para><para>Default value: POPPLER_PERMISSIONS_OK_TO_PRINT|POPPLER_PERMISSIONS_OK_TO_MODIFY|POPPLER_PERMISSIONS_OK_TO_COPY|POPPLER_PERMISSIONS_OK_TO_ADD_NOTES|POPPLER_PERMISSIONS_OK_TO_FILL_FORM</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--producer"/>The <literal>&quot;producer&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:producer</primary></indexterm><programlisting>  &quot;producer&quot;                 <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The software that converted the document.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--subject"/>The <literal>&quot;subject&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:subject</primary></indexterm><programlisting>  &quot;subject&quot;                  <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>Subjects the document touches.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--title"/>The <literal>&quot;title&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:title</primary></indexterm><programlisting>  &quot;title&quot;                    <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The title of the document.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2><title><anchor id="PopplerDocument--viewer-preferences"/>The <literal>&quot;viewer-preferences&quot;</literal> property</title>
+<indexterm><primary>PopplerDocument:viewer-preferences</primary></indexterm><programlisting>  &quot;viewer-preferences&quot;       <link linkend="PopplerViewerPreferences">PopplerViewerPreferences</link>  : Read</programlisting>
+<para>Viewer Preferences.</para></refsect2>
+<refsect2><title><anchor id="PopplerPage--label"/>The <literal>&quot;label&quot;</literal> property</title>
+<indexterm><primary>PopplerPage:label</primary></indexterm><programlisting>  &quot;label&quot;                    <link linkend="gchararray">gchararray</link>            : Read</programlisting>
+<para>The label of the page.</para><para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+
+
+
+
+<refsect1><refsect2 /><refsect2 /></refsect1>
+</refentry>

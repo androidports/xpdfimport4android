@@ -16,6 +16,7 @@ PKG_CONFIG_PATH=$(DEST_DIR)/lib/pkgconfig
 
 
 all: zlib_all jpeg_all expat_all freetype_all fontconfig_all poppler_all
+	ndk-build
 
 clean_all:
 	rm -rf $(DEST_DIR)

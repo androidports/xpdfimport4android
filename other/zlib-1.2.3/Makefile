@@ -39,7 +39,7 @@ TAR=tar
 SHELL=/bin/sh
 EXE=
 
-prefix =/Users/akikazu/workspace/AOO411_ext_libs/prebuild/poppler
+prefix =/Users/akikazu/git/xpdfimport4android/prebuild/poppler
 exec_prefix =${prefix}
 libdir =${exec_prefix}/lib
 includedir =${prefix}/include

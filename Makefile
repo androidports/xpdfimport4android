@@ -15,13 +15,13 @@ DEST_DIR=$(PREFIX_DIR)/$(PROJECT_NAME)
 PKG_CONFIG_PATH=$(DEST_DIR)/lib/pkgconfig
 
 
-all: clean_all zlib_all expat_all freetype_all fontconfig_all poppler_all
+all: zlib_all jpeg_all expat_all freetype_all fontconfig_all poppler_all
 
 clean_all:
 	rm -rf $(DEST_DIR)
 
 
-poppler_all: poppler_configure poppler_clean poppler_build poppler_install
+poppler_all: poppler_configure poppler_build poppler_install
 
 poppler_configure:
 	cd $(POPPLER_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) LDFLAGS=-L$(DEST_DIR)/lib ./configure --host=$(HOST) --prefix=$(DEST_DIR) --disable-cms --disable-libopenjpeg --disable-cairo-output --enable-xpdf-headers --disable-abiword-output --disable-poppler-glib
@@ -36,7 +36,7 @@ poppler_clean:
 	cd $(POPPLER_SOURCE_DIR); make clean
 
 
-jpeg_all: jpeg_configure jpeg_clean jpeg_build jpeg_install
+jpeg_all: jpeg_configure jpeg_build jpeg_install
 
 jpeg_configure:
 	cd $(JPEG_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) ./configure --host=$(HOST) --prefix=$(DEST_DIR)
@@ -51,7 +51,7 @@ jpeg_clean:
 	cd $(JPEG_SOURCE_DIR); make clean
 
 
-fontconfig_all: fontconfig_configure fontconfig_clean fontconfig_build fontconfig_install
+fontconfig_all: fontconfig_configure fontconfig_build fontconfig_install
 
 fontconfig_configure:
 	cd $(FONTCONFIG_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) ./configure --host=$(HOST) --prefix=$(DEST_DIR) --enable-static
@@ -66,7 +66,7 @@ fontconfig_clean:
 	cd $(FONTCONFIG_SOURCE_DIR); make clean
 
 
-zlib_all: zlib_configure zlib_clean zlib_build zlib_install
+zlib_all: zlib_configure zlib_build zlib_install
 
 zlib_configure:
 	cd $(ZLIB_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) CC=arm-linux-androideabi-gcc LD=arm-linux-androideabi-ld AR="arm-linux-androideabi-ar -rc" RANLIB=arm-linux-androideabi-ranlib ./configure --prefix=$(DEST_DIR)
@@ -81,7 +81,7 @@ zlib_clean:
 	cd $(ZLIB_SOURCE_DIR); make clean
 
 
-expat_all: expat_configure expat_clean expat_build expat_install
+expat_all: expat_configure expat_build expat_install
 
 expat_configure:
 	cd $(EXPAT_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) ./configure --host=$(HOST) --prefix=$(DEST_DIR)
@@ -96,7 +96,7 @@ expat_clean:
 	cd $(EXPAT_SOURCE_DIR); make clean
 
 
-freetype_all: freetype_configure freetype_clean freetype_build freetype_install
+freetype_all: freetype_configure freetype_build freetype_install
 
 freetype_configure:
 	cd $(FREETYPE_SOURCE_DIR); PKG_CONFIG_PATH=$(PKG_CONFIG_PATH) ./configure --host=$(HOST) --prefix=$(DEST_DIR)
